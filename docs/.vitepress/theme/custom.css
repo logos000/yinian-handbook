@@ -1,20 +1,217 @@
 /**
- * Yinian brand palette — mirrors the product's design tokens
- * (accent #9b7247, warm apricot #c2914a, ink-on-paper #f0eee5).
+ * Yinian brand theme for the handbook.
+ * Mirrors the product's design tokens (muse-desktop globals.css):
+ * paper #eae5e1 / #f2eee9 / #f8f5f1, ink #252820, text #080a08,
+ * accent #9b7247 (ink variant #85603a), warm apricot #c2914a,
+ * square corners and hard offset shadows instead of soft blur.
  */
 :root {
-  --vp-c-brand-1: #9b7247;
-  --vp-c-brand-2: #7f5c39;
-  --vp-c-brand-3: #85603a;
+  --yn-font-cjk: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+  --yn-font-body: 'Barlow', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', var(--yn-font-cjk);
+  --yn-font-display: 'Barlow Condensed', 'Barlow', ui-sans-serif, system-ui, var(--yn-font-cjk);
+  --yn-accent: #9b7247;
+  --yn-ink-btn: #252820;
+  --yn-on-ink-btn: #f0eee5;
+  --yn-shadow: rgba(37, 40, 32, 0.14);
+
+  --vp-font-family-base: var(--yn-font-body);
+
+  --vp-c-bg: #f2eee9;
+  --vp-c-bg-alt: #eae5e1;
+  --vp-c-bg-elv: #f8f5f1;
+  --vp-c-bg-soft: #e3ddd6;
+
+  --vp-c-text-1: #080a08;
+  --vp-c-text-2: #5e5b53;
+  --vp-c-text-3: #716d63;
+
+  --vp-c-border: #aaa59a;
+  --vp-c-divider: #c8c2b8;
+  --vp-c-gutter: #e3ddd6;
+
+  --vp-c-default-1: #77756d;
+  --vp-c-default-2: #c8c2b8;
+  --vp-c-default-3: #d6d0c7;
+  --vp-c-default-soft: rgba(119, 117, 109, 0.12);
+
+  --vp-c-brand-1: #85603a;
+  --vp-c-brand-2: #9b7247;
+  --vp-c-brand-3: #9b7247;
   --vp-c-brand-soft: rgba(155, 114, 71, 0.14);
 
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #9b7247 30%, #c2914a);
+  --vp-button-brand-bg: #252820;
+  --vp-button-brand-border: #252820;
+  --vp-button-brand-text: #f0eee5;
+  --vp-button-brand-hover-bg: #4b4a3b;
+  --vp-button-brand-hover-border: #4b4a3b;
+  --vp-button-brand-hover-text: #f0eee5;
+  --vp-button-brand-active-bg: #080a08;
+  --vp-button-brand-active-border: #080a08;
+
+  --vp-code-block-bg: #e8e2db;
+  --vp-code-bg: rgba(155, 114, 71, 0.12);
+  --vp-code-color: #6f4f2e;
+
+  --vp-custom-block-info-bg: #e8e2db;
+  --vp-custom-block-info-border: transparent;
+  --vp-custom-block-tip-bg: rgba(155, 114, 71, 0.1);
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+
+  --vp-nav-bg-color: #f2eee9;
+  --vp-sidebar-bg-color: #eae5e1;
+  --vp-local-search-bg: #f2eee9;
+  --vp-local-search-result-bg: #f8f5f1;
+  --vp-local-search-highlight-bg: #9b7247;
+
+  --vp-shadow-3: 6px 6px 0 rgba(37, 40, 32, 0.12);
+  --vp-shadow-4: 8px 8px 0 rgba(37, 40, 32, 0.12);
 }
 
 .dark {
-  --vp-c-brand-1: #c2914a;
-  --vp-c-brand-2: #d0a25f;
-  --vp-c-brand-3: #d0a25f;
+  --yn-accent: #c2914a;
+  --yn-ink-btn: #f0eee5;
+  --yn-on-ink-btn: #252820;
+  --yn-shadow: rgba(0, 0, 0, 0.45);
+
+  --vp-c-bg: #1d1f19;
+  --vp-c-bg-alt: #181a14;
+  --vp-c-bg-elv: #252820;
+  --vp-c-bg-soft: #2c2f26;
+
+  --vp-c-text-1: #f0eee5;
+  --vp-c-text-2: #bdb8ac;
+  --vp-c-text-3: #8f8b80;
+
+  --vp-c-border: #4b4a3b;
+  --vp-c-divider: #34372d;
+  --vp-c-gutter: #12140f;
+
+  --vp-c-default-soft: rgba(240, 238, 229, 0.08);
+
+  --vp-c-brand-1: #d6aa66;
+  --vp-c-brand-2: #c2914a;
+  --vp-c-brand-3: #c2914a;
   --vp-c-brand-soft: rgba(194, 145, 74, 0.16);
+
+  --vp-button-brand-bg: #f0eee5;
+  --vp-button-brand-border: #f0eee5;
+  --vp-button-brand-text: #252820;
+  --vp-button-brand-hover-bg: #ffffff;
+  --vp-button-brand-hover-border: #ffffff;
+  --vp-button-brand-hover-text: #252820;
+  --vp-button-brand-active-bg: #d9d5c8;
+  --vp-button-brand-active-border: #d9d5c8;
+
+  --vp-code-block-bg: #181a14;
+  --vp-code-bg: rgba(194, 145, 74, 0.14);
+  --vp-code-color: #e3bd84;
+
+  --vp-custom-block-info-bg: #252820;
+  --vp-custom-block-tip-bg: rgba(194, 145, 74, 0.1);
+
+  --vp-nav-bg-color: #1d1f19;
+  --vp-sidebar-bg-color: #181a14;
+  --vp-local-search-bg: #1d1f19;
+  --vp-local-search-result-bg: #252820;
+  --vp-local-search-highlight-bg: #c2914a;
+}
+
+/* Nav: wordmark in the display face */
+.VPNavBarTitle .title {
+  font-family: var(--yn-font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.VPNavBarTitle .logo {
+  height: 26px;
+}
+
+/* Square corners everywhere, as in the product */
+.VPButton,
+.DocSearch-Button,
+.VPLocalSearchBox .shell,
+.vp-doc div[class*='language-'],
+.vp-doc .custom-block,
+.vp-doc :not(pre) > code,
+.VPDocFooter .pager-link,
+.VPFlyout .menu,
+.VPMenu {
+  border-radius: 2px !important;
+}
+
+/* Docs typography */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  font-family: var(--yn-font-display);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.vp-doc h1 {
+  font-size: 44px;
+  line-height: 1.05;
+}
+.vp-doc h2 {
+  font-size: 30px;
+  line-height: 1.15;
+  border-top-color: var(--vp-c-text-1);
+}
+.vp-doc h3 {
+  font-size: 22px;
+}
+.vp-doc p,
+.vp-doc li {
+  font-size: 16.5px;
+  line-height: 1.7;
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+.vp-doc tr {
+  background: transparent !important;
+  border-top: 1px solid var(--vp-c-divider);
+}
+.vp-doc th,
+.vp-doc td {
+  border: 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+.vp-doc th {
+  background: transparent;
+  font-family: var(--yn-font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  border-bottom: 2px solid var(--vp-c-text-1);
+}
+
+.vp-doc a {
+  text-underline-offset: 3px;
+}
+
+.VPDocFooter .pager-link {
+  border-color: var(--vp-c-border);
+}
+.VPDocFooter .pager-link:hover {
+  border-color: var(--vp-c-text-1);
+}
+.VPDocFooter .title {
+  font-family: var(--yn-font-display);
+  font-size: 17px;
+}
+
+/* Sidebar: active item gets an ink rule instead of a colored text-only state */
+.VPSidebarItem.is-active > .item .indicator {
+  background-color: var(--vp-c-text-1);
+}
+.VPSidebarItem .text {
+  font-size: 15px;
+}
+
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider) !important;
 }

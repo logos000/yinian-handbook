@@ -8,14 +8,16 @@ Product handbook & landing site for [Yinian](https://yinian.avalidigital.ca), an
 
 ```
 docs/
-  index.md                # Landing page (hero + features)
+  index.md                # Landing page (renders <HomeLanding />)
   guide/quick-start.md    # From zero to first generated shots
   guide/pipeline.md       # The six production stages
   self-host.md            # Docker self-hosting guide
   faq.md
-  public/                 # logo.svg, robots.txt, screenshots later
+  public/                 # logo.svg (same mark as the app favicon), og.png, robots.txt
   .vitepress/config.ts    # nav / sidebar / sitemap / OG tags
-  .vitepress/theme/       # brand palette (product accent #9b7247)
+  .vitepress/theme/       # brand tokens (custom.css) + landing components
+    components/HomeLanding.vue      # landing sections
+    components/StoryboardSheet.vue  # hero storyboard-sheet illustration
 ```
 
 ## Local development
@@ -84,10 +86,16 @@ Connect the repo in the Cloudflare dashboard: build command `npm run build`, out
 ## Pre-launch checklist
 
 - [ ] Replace `SITE_URL` in `docs/.vitepress/config.ts` and the sitemap line in `docs/public/robots.txt` with the final domain
-- [ ] Capture product screenshots **with the UI language set to English**, replace the `Screenshot coming soon` blocks (`grep -r "Screenshot coming soon" docs/`)
-- [ ] Add a social card image (1200×630 PNG → `docs/public/og.png`, reference it as `og:image` in `config.ts` head)
+- [ ] Capture product screenshots **with the UI language set to English** and put them where the `<!-- screenshot: … -->` markers are (`grep -rn "screenshot:" docs/`)
+- [x] Social card image (`docs/public/og.png`, 1200×630, rendered from the landing hero; referenced as `og:image` / `twitter:image`)
 - [ ] Decide the self-hosting distribution story (wording in `docs/self-host.md` currently says "by request")
 - [ ] Optional: add the GitHub repo link to `socialLinks` in `config.ts` once the repo is public
+
+## Design notes
+
+- Palette, square corners and hard offset shadows mirror the product’s design tokens; light mode is paper, dark mode is ink.
+- Type is Barlow / Barlow Condensed, self-hosted via `@fontsource` (no third-party font requests).
+- The hero storyboard sheet is the page’s one animated moment; it respects `prefers-reduced-motion`.
 
 ## Conventions
 

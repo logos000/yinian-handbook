@@ -10,17 +10,13 @@ Open [yinian.avalidigital.ca](https://yinian.avalidigital.ca) and sign up with y
 
 Your work is organized into projects. Create one, give it a working title, and you'll land in the session view — this is where the whole production lives.
 
-::: info Screenshot coming soon
-The project screen, captured in the English UI.
-:::
+<!-- screenshot: The project screen, captured in the English UI. -->
 
 ## 3. Write your script
 
 Write your episode as plain text — a synopsis, a full script, or rough notes in between. You can iterate conversationally: ask for a rewrite, a punch-up, or a cut to N scenes.
 
-::: info Screenshot coming soon
-The script view with a work-in-progress episode.
-:::
+<!-- screenshot: The script view with a work-in-progress episode. -->
 
 ## 4. Break it into shots
 
