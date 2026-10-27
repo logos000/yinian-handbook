@@ -1,39 +1,40 @@
 <script setup lang="ts">
 import { withBase } from 'vitepress'
-import StoryboardSheet from './StoryboardSheet.vue'
+import ChatFilm from './ChatFilm.vue'
 
 const APP_URL = 'https://yinian.avalidigital.ca'
 
-// Mirrors guide/pipeline.md; the Chinese names are the ones used inside the app
+// What the agent works through after one idea; mirrors guide/pipeline.md.
+// The Chinese names are the ones used inside the app.
 const stages = [
-  { en: 'Script', zh: '剧本', text: 'Write in plain language. Ask for rewrites, cuts or a tighter draft.' },
-  { en: 'Storyboard', zh: '拆镜', text: 'The script becomes a shot list with framing, action and duration.' },
-  { en: 'Character lock', zh: '定妆', text: 'Fix each character’s look before anything is generated.' },
-  { en: 'Keyframes', zh: '生图', text: 'One still per shot, in batches. Re-roll any shot on its own.' },
-  { en: 'Video', zh: '视频', text: 'Keyframes become moving shots, with progress you can watch.' },
-  { en: 'Editing handoff', zh: '剪辑交接', text: 'Export an ordered package for Premiere, Resolve or any editor.' }
+  { en: 'Script', zh: '剧本', text: 'Grows your idea, or a novel you drop in, into an outline and a script.' },
+  { en: 'Casting', zh: '定妆', text: 'Designs every character and locks the look before anything is drawn.' },
+  { en: 'Storyboard', zh: '拆镜', text: 'Breaks the script into shots with framing, action and timing.' },
+  { en: 'Images', zh: '生图', text: 'Draws a keyframe for each shot, starting with a sample for you to check.' },
+  { en: 'Video & voice', zh: '视频', text: 'Brings each shot to life, with sound and voiceover where the scene needs it.' },
+  { en: 'Final cut', zh: '成片', text: 'Edits it all into one mp4, or a tidy package for your own editor.' }
 ]
 
-const safeguards = [
+const promises = [
   {
-    key: 'faces',
-    title: 'Faces stay the same',
-    text: 'Lock a character once. Every keyframe after that is generated against the same reference, so your lead still looks like your lead in shot\u00a040.'
+    key: 'talk',
+    title: 'Just say it',
+    text: 'Describe what you want in everyday English or Chinese. Changes work the same way: “make shot 3 darker”, “give her a red scarf”. There are no settings to learn and no prompts to write.'
   },
   {
-    key: 'redo',
-    title: 'Redo one shot, keep the rest',
-    text: 'Unhappy with a single keyframe or clip? Regenerate just that one. Nothing else on the board moves.'
+    key: 'director',
+    title: 'You stay the director',
+    text: 'Yinian shows you the script, the cast and a sample before it goes further. Approve it or ask for changes. Once you trust it, set a budget and let it run on its own.'
+  },
+  {
+    key: 'faces',
+    title: 'The same face in every shot',
+    text: 'Each character’s look is locked once and every shot is drawn against it, so your lead still looks like your lead in shot\u00a040.'
   },
   {
     key: 'billing',
-    title: 'No double charges',
-    text: 'A failed or timed-out video job is never resubmitted behind your back. If a result was already paid for, you fetch it again instead of paying twice.'
-  },
-  {
-    key: 'private',
-    title: 'Your workspace is yours',
-    text: 'Every account gets its own isolated workspace. API keys are stored encrypted and never written to logs.'
+    title: 'It asks before it spends',
+    text: 'Every paid step comes with a cost estimate first. A spending cap stops runaway costs, and a failed video job is never charged twice.'
   }
 ]
 </script>
@@ -43,30 +44,31 @@ const safeguards = [
     <section class="hero">
       <div class="hero-copy">
         <p class="intro">Yinian <span lang="zh">一念</span>, “one thought”</p>
-        <h1>One person,<br /><span class="nw">one anime series.</span></h1>
+        <h1>One thought.<br /><span class="nw">One finished short.</span></h1>
         <p class="lede">
-          A production workbench for solo creators. Write the script, and Yinian carries every shot
-          through storyboard, character design, keyframes and video, then hands you a folder your
-          editor can open.
+          Tell Yinian your story in a sentence, the way you’d tell a friend. Its AI agent writes
+          the script, designs the characters, plans every shot, generates the images and video, and
+          edits it all into a finished anime short. You just chat.
         </p>
         <div class="actions">
           <a class="btn primary" :href="APP_URL">Open the app</a>
-          <a class="btn ghost" :href="withBase('/guide/quick-start')">Read the quick start</a>
+          <a class="btn ghost" :href="withBase('/guide/quick-start')">See how it works</a>
         </div>
-        <p class="aside">Runs in your browser. English and Chinese interface.</p>
+        <p class="aside">No experience needed. Runs in your browser, in English or Chinese.</p>
       </div>
       <div class="hero-sheet">
-        <StoryboardSheet />
+        <ChatFilm />
       </div>
     </section>
 
     <section class="band stages" aria-labelledby="stages-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="stages-title">Six stages, one workspace</h2>
+          <h2 id="stages-title">What happens after you hit send</h2>
           <p>
-            The pipeline follows a real animation production. Each stage feeds the next, and you
-            can go back to any of them at any time.
+            A real animation production has six stages. Yinian’s agent works through all of them
+            for you, keeps a live plan in the chat, and stops to show you the results. Jump in at
+            any stage and change anything by saying so.
           </p>
         </div>
         <ol class="track">
@@ -76,40 +78,39 @@ const safeguards = [
             <p>{{ s.text }}</p>
           </li>
         </ol>
-        <a class="more" :href="withBase('/guide/pipeline')">See what happens at each stage</a>
+        <a class="more" :href="withBase('/guide/pipeline')">See what the agent does at each stage</a>
       </div>
     </section>
 
     <section class="band guards" aria-labelledby="guards-title">
       <div class="wrap split">
-        <h2 id="guards-title">Made for the parts that usually go wrong</h2>
+        <h2 id="guards-title">Made for your very first film</h2>
         <ul class="guard-list">
-          <li v-for="g in safeguards" :key="g.key">
+          <li v-for="g in promises" :key="g.key">
             <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true">
-              <template v-if="g.key === 'faces'">
+              <template v-if="g.key === 'talk'">
+                <path d="M6 4 H44 V26 H22 L13 34 V26 H6 Z" />
+                <path d="M13 12 H37 M13 19 H29" />
+                <path class="acc" d="M50 16 H58 V36 H54 V40 L49 36 H38 V30" />
+              </template>
+              <template v-else-if="g.key === 'director'">
+                <rect x="6" y="4" width="10" height="10" />
+                <rect x="6" y="18" width="10" height="10" />
+                <rect x="6" y="32" width="6" height="6" />
+                <path class="acc" d="M8 9 L11 12 L15 6 M8 23 L11 26 L15 20" />
+                <path d="M22 9 H58 M22 23 H50 M22 35 H40" />
+              </template>
+              <template v-else-if="g.key === 'faces'">
                 <g v-for="x in [12, 32, 52]" :key="x">
                   <circle :cx="x" cy="15" r="7" />
                   <path :d="`M${x - 9} 34 C${x - 8} 26 ${x - 4} 23 ${x} 23 C${x + 4} 23 ${x + 8} 26 ${x + 9} 34`" />
                 </g>
                 <path class="acc" d="M4 38 H60" />
               </template>
-              <template v-else-if="g.key === 'redo'">
-                <rect x="4" y="4" width="16" height="14" />
-                <rect x="24" y="4" width="16" height="14" />
-                <rect x="44" y="4" width="16" height="14" />
-                <rect x="4" y="22" width="16" height="14" />
-                <rect class="acc fill" x="24" y="22" width="16" height="14" />
-                <rect x="44" y="22" width="16" height="14" />
-              </template>
-              <template v-else-if="g.key === 'billing'">
+              <template v-else>
                 <path d="M18 2 H46 V38 L41 35 L36 38 L32 35 L28 38 L23 35 L18 38 Z" />
                 <path d="M24 12 H40 M24 19 H34" />
                 <path class="acc" d="M24 27 H40" />
-              </template>
-              <template v-else>
-                <rect x="14" y="16" width="36" height="22" />
-                <path d="M22 16 V10 a10 10 0 0 1 20 0 V16" />
-                <circle class="acc fill" cx="32" cy="27" r="3" />
               </template>
             </svg>
             <div>
@@ -128,7 +129,7 @@ const safeguards = [
           <article class="edition hosted">
             <h3>In your browser</h3>
             <p>
-              Sign up with an email address and start your first project. We run the servers and
+              Sign up with an email address and tell Yinian your first idea. We run the servers and
               keep them up to date.
             </p>
             <a class="btn on-ink" :href="APP_URL">Create an account</a>
@@ -137,7 +138,8 @@ const safeguards = [
             <h3>On your own machine</h3>
             <p>
               The same app in Docker, with your own Supabase project for accounts. Projects, media
-              and keys live in one volume you control. The self-hosted build is available on request.
+              and keys live in one volume you control, and every account’s workspace is kept
+              separate. The self-hosted build is available on request.
             </p>
             <a class="btn ghost" :href="withBase('/self-host')">Read the self-hosting guide</a>
           </article>

@@ -1,8 +1,8 @@
 # Yinian Handbook
 
-**Yinian (一念) — One person, one anime series.**
+**Yinian (一念) — One thought, one finished short.**
 
-Product handbook & landing site for [Yinian](https://yinian.avalidigital.ca), an AI production workbench that takes a solo creator from script to finished anime episode. Built with [VitePress](https://vitepress.dev) (static, English-first, bilingual-ready), deployed as the public promotion & SEO anchor — the app itself is login-gated, so this site is what gets crawled, linked and shared.
+Product handbook & landing site for [Yinian](https://yinian.avalidigital.ca), an AI agent that turns a one-line idea into a finished anime short through plain conversation. Built with [VitePress](https://vitepress.dev) (static, English-first, bilingual-ready), deployed as the public promotion & SEO anchor — the app itself is login-gated, so this site is what gets crawled, linked and shared.
 
 ## Structure
 
@@ -17,7 +17,7 @@ docs/
   .vitepress/config.ts    # nav / sidebar / sitemap / OG tags
   .vitepress/theme/       # brand tokens (custom.css) + landing components
     components/HomeLanding.vue      # landing sections
-    components/StoryboardSheet.vue  # hero storyboard-sheet illustration
+    components/ChatFilm.vue         # hero conversation: idea in, finished short out
 ```
 
 ## Local development
@@ -95,7 +95,8 @@ Connect the repo in the Cloudflare dashboard: build command `npm run build`, out
 
 - Palette, square corners and hard offset shadows mirror the product’s design tokens; light mode is paper, dark mode is ink.
 - Type is Barlow / Barlow Condensed, self-hosted via `@fontsource` (no third-party font requests).
-- The hero storyboard sheet is the page’s one animated moment; it respects `prefers-reduced-motion`.
+- The pitch is the agent: one idea in, a finished short out, driven by chat. The hero conversation (`ChatFilm.vue`) plays through once as the page’s only animated moment and respects `prefers-reduced-motion`.
+- Claims stay honest about how the agent works today: it pauses for approval at key stages and quotes costs before paid steps, unless the user sets a budget.
 
 ## Conventions
 

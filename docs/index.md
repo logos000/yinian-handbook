@@ -1,7 +1,7 @@
 ---
 layout: home
 markdownStyles: false
-title: One person, one anime series
+title: One thought, one finished short
 ---
 
 <HomeLanding />

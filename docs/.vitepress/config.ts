@@ -13,7 +13,7 @@ const BASE = '/yinian-handbook/'
 const APP_URL = 'https://yinian.avalidigital.ca'
 
 const DESCRIPTION =
-  'Yinian (一念) is an AI production workbench that takes a solo creator from script to finished anime episode — storyboard, character design, keyframes, video generation, and editing handoff in one pipeline.'
+  'Yinian (一念, "one thought") is an AI agent that turns one idea into a finished anime short. Just chat: it writes the script, designs the characters, storyboards every shot, generates the images and video, and edits the final cut. No experience needed.'
 
 export default defineConfig({
   base: BASE,
@@ -25,7 +25,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#f2eee9' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Yinian' }],
-    ['meta', { property: 'og:title', content: 'Yinian — One person, one anime series' }],
+    ['meta', { property: 'og:title', content: 'Yinian — One thought, one finished short' }],
     ['meta', { property: 'og:description', content: DESCRIPTION }],
     ['meta', { property: 'og:url', content: SITE_URL }],
     ['meta', { property: 'og:image', content: `${SITE_URL}/og.png` }],
@@ -33,7 +33,7 @@ export default defineConfig({
     ['meta', { property: 'og:image:height', content: '630' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:image', content: `${SITE_URL}/og.png` }],
-    ['meta', { name: 'twitter:title', content: 'Yinian — One person, one anime series' }],
+    ['meta', { name: 'twitter:title', content: 'Yinian — One thought, one finished short' }],
     ['meta', { name: 'twitter:description', content: DESCRIPTION }]
   ],
   sitemap: {
@@ -78,7 +78,7 @@ export default defineConfig({
       text: 'Back to top'
     },
     footer: {
-      message: 'One person, one anime series.',
+      message: 'One thought, one finished short.',
       copyright: 'Copyright © 2026-present Yinian'
     }
   }

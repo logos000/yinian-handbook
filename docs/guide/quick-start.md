@@ -1,39 +1,41 @@
 # Quick start
 
-From zero to your first generated shots in the hosted edition. Total time for a first run: an afternoon.
+From one idea to a finished short, by chatting with Yinian. You don't need any filmmaking or AI experience: if you can describe the story you want, you can make it.
 
 ## 1. Create an account
 
 Open [yinian.avalidigital.ca](https://yinian.avalidigital.ca) and sign up with your email. You'll receive a confirmation email — if you ever lose your password, the login page has a "forgot password" flow that emails you a recovery link.
 
-## 2. Create a project
+## 2. Start a project from your idea
 
-Your work is organized into projects. Create one, give it a working title, and you'll land in the session view — this is where the whole production lives.
+Create a new project and choose how to begin:
 
-<!-- screenshot: The project screen, captured in the English UI. -->
+- **Paste an idea**: a line or two is enough. It helps to say who the story is about, what they want, and what stands in the way.
+- **Import a novel**: a txt, epub, docx or pdf file. Yinian reads it in parts and splits it into episodes for you.
+- **Open the sample**: a complete example project you can explore first, with no setup at all.
 
-## 3. Write your script
+You land in the session view, with Yinian ready in the chat.
 
-Write your episode as plain text — a synopsis, a full script, or rough notes in between. You can iterate conversationally: ask for a rewrite, a punch-up, or a cut to N scenes.
+<!-- screenshot: The new-project dialog with "Paste an idea" selected, captured in the English UI. -->
 
-<!-- screenshot: The script view with a work-in-progress episode. -->
+## 3. Ask Yinian to make it
 
-## 4. Break it into shots
+Pick **Produce an episode from scratch** in the chat, or just type what you want in your own words, for example "Turn this into a one-minute short". Press Ctrl+J (⌘J on a Mac) to jump to the chat box at any time.
 
-Turn the script into a storyboard: Yinian splits scenes into individual shots with framing, on-screen action, and duration. Review the board, nudge anything you disagree with, and lock it when you're happy.
+Yinian writes a plan checklist at the top of the chat and starts working through it: outline and script, character designs, the shot list, then a sample of the first few shots.
 
-## 5. Lock your cast
+<!-- screenshot: The chat with the plan checklist in progress. -->
 
-For each character, lock a reference look — the design that every later generation will stay consistent with. Adjust and re-lock at any time; shots generated afterwards follow the new look.
+## 4. Check in when it asks
 
-## 6. Generate keyframes
+You're the director. At the key points (the script, the cast, the sample shots) Yinian shows you what it made and waits for your go-ahead. Say what you'd like changed, in plain words: "make the ending sadder", "she should have short hair", "shot 3 needs to be darker".
 
-Generate the still image for each shot, in batches or one by one. Every shot can be regenerated independently — the rest of the board stays untouched.
+Steps that cost money, like generating images, voice and video, come with a cost estimate and a confirmation card first. Answer it with a click or the Y / N keys. If you'd rather not be asked each time, set a session budget in Settings: calls within the budget are approved automatically, and a spending cap stops everything from running away.
 
-## 7. Generate video
+## 5. Get your film
 
-Turn keyframes into moving shots. Jobs are submitted through the video gateway; you can watch progress, and if a job fails you can retry or fetch its result without ever being billed twice for the same shot.
+When the shots are done, Yinian edits them into a single mp4 you can download and share. If you'd like to finish the edit yourself, ask for the package instead: one folder per shot plus a shot list, ready for CapCut, Premiere, DaVinci Resolve or any other editor.
 
-## 8. Hand off to editing
+## If something isn't set up yet
 
-When your shots are ready, export an organized package for the edit — your editor (or you, in another app) picks it up from there. That's the whole series pipeline, solo.
+Yinian needs a language model for the chat, plus image, voice and video services for generation. If the app tells you a service isn't configured, open **Settings** and connect the one it names. The sample project works without any of this.
