@@ -3,7 +3,7 @@
 Prefer your data on your own machine? Yinian also runs as a self-hosted Docker deployment — the same source, the same pipeline, per-user workspaces backed by a local SQLite store.
 
 ::: info Distribution status
-The hosted edition at [muse.avalidigital.ca](https://muse.avalidigital.ca) is the fastest way to start. Access to the self-hosted distribution (source or image) is currently by request — reach out to the team if you want to run your own.
+The hosted edition at [yinian.avalidigital.ca](https://yinian.avalidigital.ca) is the fastest way to start. Access to the self-hosted distribution (source or image) is currently by request — reach out to the team if you want to run your own.
 :::
 
 ## What you'll need

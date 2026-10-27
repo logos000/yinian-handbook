@@ -4,7 +4,7 @@ From zero to your first generated shots in the hosted edition. Total time for a 
 
 ## 1. Create an account
 
-Open [muse.avalidigital.ca](https://muse.avalidigital.ca) and sign up with your email. You'll receive a confirmation email — if you ever lose your password, the login page has a "forgot password" flow that emails you a recovery link.
+Open [yinian.avalidigital.ca](https://yinian.avalidigital.ca) and sign up with your email. You'll receive a confirmation email — if you ever lose your password, the login page has a "forgot password" flow that emails you a recovery link.
 
 ## 2. Create a project
 

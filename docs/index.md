@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Open the app
-      link: https://muse.avalidigital.ca
+      link: https://yinian.avalidigital.ca
     - theme: alt
       text: Read the guide
       link: /guide/quick-start

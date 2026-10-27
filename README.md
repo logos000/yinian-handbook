@@ -2,7 +2,7 @@
 
 **Yinian (一念) — One person, one anime series.**
 
-Product handbook & landing site for [Yinian](https://muse.avalidigital.ca), an AI production workbench that takes a solo creator from script to finished anime episode. Built with [VitePress](https://vitepress.dev) (static, English-first, bilingual-ready), deployed as the public promotion & SEO anchor — the app itself is login-gated, so this site is what gets crawled, linked and shared.
+Product handbook & landing site for [Yinian](https://yinian.avalidigital.ca), an AI production workbench that takes a solo creator from script to finished anime episode. Built with [VitePress](https://vitepress.dev) (static, English-first, bilingual-ready), deployed as the public promotion & SEO anchor — the app itself is login-gated, so this site is what gets crawled, linked and shared.
 
 ## Structure
 

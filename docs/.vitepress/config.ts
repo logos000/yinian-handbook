@@ -5,7 +5,7 @@ import { defineConfig } from 'vitepress'
 // When moving to a custom domain: remove `base` below and update this URL.
 const SITE_URL = 'https://logos000.github.io/yinian-handbook'
 
-const APP_URL = 'https://muse.avalidigital.ca'
+const APP_URL = 'https://yinian.avalidigital.ca'
 
 const DESCRIPTION =
   'Yinian (一念) is an AI production workbench that takes a solo creator from script to finished anime episode — storyboard, character design, keyframes, video generation, and editing handoff in one pipeline.'

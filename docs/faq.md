@@ -18,7 +18,7 @@ Generation is billed by usage. Each creator can plug in their own video-generati
 
 ## What's the difference between the hosted edition and self-hosting?
 
-- **Hosted** ([muse.avalidigital.ca](https://muse.avalidigital.ca)): open an account and start immediately — we run the servers.
+- **Hosted** ([yinian.avalidigital.ca](https://yinian.avalidigital.ca)): open an account and start immediately — we run the servers.
 - **Self-hosted**: run your own Docker deployment with your own Supabase project for accounts; all data stays on your machine. See [Self-hosting](/self-host).
 
 ## Where is my data?
