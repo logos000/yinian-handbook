@@ -2,4 +2,6 @@ User-agent: *
 Allow: /
 
 # TODO: replace hostname with the final domain before launch
-Sitemap: https://docs.avalidigital.ca/sitemap.xml
+# (note: at a sub-path like *.github.io/repo/, robots.txt is only read from
+# the domain root — this file takes effect once the site is on its own domain)
+Sitemap: https://logos000.github.io/yinian-handbook/sitemap.xml

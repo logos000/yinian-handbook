@@ -2,7 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // TODO(pre-launch): replace with the final domain (e.g. https://yinian.app)
 // — drives the sitemap hostname, robots.txt sitemap line and og:url.
-const SITE_URL = 'https://docs.avalidigital.ca'
+// When moving to a custom domain: remove `base` below and update this URL.
+const SITE_URL = 'https://logos000.github.io/yinian-handbook'
 
 const APP_URL = 'https://muse.avalidigital.ca'
 
@@ -10,6 +11,9 @@ const DESCRIPTION =
   'Yinian (一念) is an AI production workbench that takes a solo creator from script to finished anime episode — storyboard, character design, keyframes, video generation, and editing handoff in one pipeline.'
 
 export default defineConfig({
+  // Sub-path deploy: https://logos000.github.io/yinian-handbook/
+  // Remove when the site moves to a custom domain.
+  base: '/yinian-handbook/',
   lang: 'en-US',
   title: 'Yinian',
   description: DESCRIPTION,
