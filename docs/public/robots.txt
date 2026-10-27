@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: replace hostname with the final domain before launch
+Sitemap: https://docs.avalidigital.ca/sitemap.xml

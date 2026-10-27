@@ -1,0 +1,20 @@
+/**
+ * Yinian brand palette — mirrors the product's design tokens
+ * (accent #9b7247, warm apricot #c2914a, ink-on-paper #f0eee5).
+ */
+:root {
+  --vp-c-brand-1: #9b7247;
+  --vp-c-brand-2: #7f5c39;
+  --vp-c-brand-3: #85603a;
+  --vp-c-brand-soft: rgba(155, 114, 71, 0.14);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #9b7247 30%, #c2914a);
+}
+
+.dark {
+  --vp-c-brand-1: #c2914a;
+  --vp-c-brand-2: #d0a25f;
+  --vp-c-brand-3: #d0a25f;
+  --vp-c-brand-soft: rgba(194, 145, 74, 0.16);
+}
